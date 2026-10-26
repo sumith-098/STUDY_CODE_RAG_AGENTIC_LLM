@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>StudyPilot AI</title>
+  <!-- Fonts: Newsreader (serif, jawab/headings ke liye) + Inter (sans, UI ke liye).
+       Internet na ho to CSS me diye fallback fonts (Georgia / system-ui) chal jaate hain. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&display=swap" rel="stylesheet" />
+  <!-- Theme paint se PEHLE set hoti hai (warna page ek pal safed chamakta hai):
+       saved choice, nahi to system (light/dark). -->
+  <script>
+    try {
+      var t = localStorage.getItem("studypilot_theme") ||
+              (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+      document.documentElement.dataset.theme = t;
+    } catch (e) {}
+  </script>
+</head>
+<body><div id="root"></div><script type="module" src="/src/main.jsx"></script></body>
+</html>
